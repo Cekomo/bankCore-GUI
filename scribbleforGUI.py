@@ -23,7 +23,7 @@ class Window2(QMainWindow):
         # self.txt.setText("Please type your identity number and password.")
         # self.txt.setFont(QFont("Arial", 10))
         # self.txt.move(125, 100)
-        # self.txt.resize(350, 50)
+        # self.txt.resize(350, 50).
 
         self.idlabel = QtWidgets.QLabel(self) 
         W.label(self.idlabel, "Identity Number:", 75, 210, 120, 25)
