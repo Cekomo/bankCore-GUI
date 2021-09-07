@@ -22,7 +22,7 @@ class Window2(QMainWindow):
         # self.txt.setReadOnly(1)
         # self.txt.setText("Please type your identity number and password.")
         # self.txt.setFont(QFont("Arial", 10))
-        # self.txt.move(125, 100)
+        # self.txt.move(125, 100).
         # self.txt.resize(350, 50).
 
         self.idlabel = QtWidgets.QLabel(self) 
