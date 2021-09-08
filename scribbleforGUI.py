@@ -98,14 +98,45 @@ class Window3(QMainWindow):
         self.hide()
 
 
-class Window4(QMainWindow):
+class Window4(QMainWindow): # connect buttons with respective paths
     def __init__(self):
         super().__init__()
+
+        W = Window()
 
         self.setWindowTitle("bankCore version(2.5)")
         self.setGeometry(200, 200, 600, 600)
 
+        self.txt = QtWidgets.QTextBrowser(self)
+        W.textbrowser(self.txt, "You can reach informations about bankCore.", 10, 125, 100, 350, 50)
 
+        # ALL THE BUTTONS WILL BE cbutton() method
+
+        self.returnButton = QtWidgets.QPushButton(self)
+        W.button(self.returnButton, "Version", 200, 200, 200, 37)
+
+        self.returnButton = QtWidgets.QPushButton(self)
+        W.button(self.returnButton, "mySQL | Storage of User Data", 200, 238, 200, 37)
+
+        self.returnButton = QtWidgets.QPushButton(self)
+        W.button(self.returnButton, "About Currency Exchange Ratios", 200, 276, 200, 37)
+
+        self.returnButton = QtWidgets.QPushButton(self)
+        W.button(self.returnButton, "Future Versions of bankCore", 200, 314, 200, 37)
+
+        self.returnButton = QtWidgets.QPushButton(self)
+        W.button(self.returnButton, "Possible Problems", 200, 352, 200, 37)
+
+        self.returnButton = QtWidgets.QPushButton(self)
+        W.button(self.returnButton, "About Developer", 200, 390, 200, 37)
+
+        self.returnButton = QtWidgets.QPushButton(self)
+        W.cbutton(self.returnButton, "Return", 200, 428, 200, 37, self.returnWindow)
+
+    def returnWindow(self):
+        self.a = Window()
+        self.a.show()
+        self.hide()
 
 class Window(QMainWindow):
     def __init__(self):
